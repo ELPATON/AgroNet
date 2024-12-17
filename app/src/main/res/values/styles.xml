@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <sytle name="ContainerComponents">
-        <item name="android:layout_width">macht_parent</item>
+    <style name="ContainerComponents">
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">250dp</item>
         <item name="android:background">@drawable/container_components</item>
         <item name="android:layout_margin">20dp</item>
+    </style>
 
-    </style</resources>
+</resources>
