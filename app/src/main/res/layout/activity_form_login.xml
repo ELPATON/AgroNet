@@ -47,6 +47,11 @@
 
         <androidx.appcompat.widget.AppCompatButton
             style="@style/Button"
+            android:text="Entrar"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/edit_senha"
