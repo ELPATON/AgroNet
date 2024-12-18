@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".PerfilCultura">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tituloCultura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perfil de Cultura: Milho"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Quantidade de Área Plantada -->
+    <TextView
+        android:id="@+id/labelAreaPlantada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Área Plantada (ha):"
+        app:layout_constraintTop_toBottomOf="@id/tituloCultura"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/inputAreaPlantada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a área plantada"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/labelAreaPlantada"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Quantidade Adubada -->
+    <TextView
+        android:id="@+id/labelAreaAdubada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Área Adubada (ha):"
+        app:layout_constraintTop_toBottomOf="@id/inputAreaPlantada"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/inputAreaAdubada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a área adubada"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/labelAreaAdubada"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Quantidade com Defensivo -->
+    <TextView
+        android:id="@+id/labelAreaDefensivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Área com Defensivo (ha):"
+        app:layout_constraintTop_toBottomOf="@id/inputAreaAdubada"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/inputAreaDefensivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a área com defensivo"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/labelAreaDefensivo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Quantidade de Sacas -->
+    <TextView
+        android:id="@+id/labelQtdSacas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade de Sacas:"
+        app:layout_constraintTop_toBottomOf="@id/inputAreaDefensivo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/inputQtdSacas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a quantidade de sacas"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/labelQtdSacas"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Resultado em kg ou toneladas -->
+    <TextView
+        android:id="@+id/labelQtdGraos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade de Grãos: 0 kg"
+        app:layout_constraintTop_toBottomOf="@id/inputQtdSacas"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botão para Calcular -->
+    <Button
+        android:id="@+id/botaoCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        app:layout_constraintTop_toBottomOf="@id/labelQtdGraos"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
