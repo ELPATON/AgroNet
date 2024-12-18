@@ -34,7 +34,7 @@
         android:drawableRight="@drawable/ic_email"
         app:layout_constraintStart_toStartOf="@id/containerComponents"
         app:layout_constraintEnd_toEndOf="@id/containerComponents"
-        app:layout_constraintTop_toTopOf="@id/containerComponents"
+        app:layout_constraintTop_toTopOf="@id/containerComponents"/>
 
     <EditText
         android:id="@+id/edit_senha"
@@ -43,7 +43,7 @@
         android:drawableRight="@drawable/ic_eye"
         app:layout_constraintStart_toStartOf="@id/containerComponents"
         app:layout_constraintEnd_toEndOf="@id/containerComponents"
-        app:layout_constraintTop_toBottomOf="@id/edit_email"
+        app:layout_constraintTop_toBottomOf="@id/edit_email"/>
 
         <androidx.appcompat.widget.AppCompatButton
             style="@style/Button"
