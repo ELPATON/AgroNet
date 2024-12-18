@@ -99,4 +99,4 @@ public class PerfilCultura extends AppCompatActivity {
     private boolean isCampoVazio(EditText campo) {
         return campo.getText().toString().trim().isEmpty();
     }
-}
+} // Este coméntario serve exclusivamente para que eu possa fazer um commit
