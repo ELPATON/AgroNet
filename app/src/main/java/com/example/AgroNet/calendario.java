@@ -4,12 +4,7 @@ import android.os.Bundle;
 import android.widget.CalendarView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -27,17 +22,13 @@ public class calendario extends AppCompatActivity {
         calendarView = findViewById(R.id.calenderView);
         calendar = Calendar.getInstance();
 
-
         setDate(18, 12, 2024);
-
-
         getDate();
 
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int day) {
-
+            public void onSelectedDayChange(CalendarView calendarView, int year, int month, int day) {
                 month = month + 1;
                 Toast.makeText(calendario.this, day + "/" + month + "/" + year, Toast.LENGTH_SHORT).show();
             }
@@ -56,9 +47,14 @@ public class calendario extends AppCompatActivity {
 
     public void setDate(int day, int month, int year) {
         calendar.set(Calendar.YEAR, year);
-        calendar.set(Calendar.MONTH, month - 1);
+        calendar.set(Calendar.MONTH, month - 1); // Ajuste do mês
         calendar.set(Calendar.DAY_OF_MONTH, day);
         long milli = calendar.getTimeInMillis();
         calendarView.setDate(milli);
+    }
+
+
+    public void voltarParaPerfil() {
+        finish(); // Finaliza a atividade atual e volta para a anterior
     }
 }
