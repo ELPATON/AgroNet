@@ -62,4 +62,10 @@ public class TelaPerfil extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
+
+    public void abrirCalendario(View v){
+        Intent intent = new Intent(TelaPerfil.this, calendario.class);
+        startActivity(intent);
+    }
 }
