@@ -15,4 +15,17 @@
        android:layout_height="wrap_content"
        />
 
+
+   <!-- Botão para voltar à tela de perfil -->
+   <androidx.appcompat.widget.AppCompatButton
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="16dp"
+       android:text="Voltar para Perfil"
+       android:background="@drawable/botao"
+       android:textColor="@color/white"
+       android:textSize="18sp"
+       android:onClick="voltarParaPerfil"
+       />
+
 </LinearLayout >
