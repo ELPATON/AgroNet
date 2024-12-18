@@ -81,7 +81,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/iconeEmail"
+            app:layout_constraintTop_toBottomOf="@id/PerfilCultura"
             android:background="@drawable/botao"
             android:backgroundTint="@color/black"
             android:layout_marginHorizontal="40dp"
@@ -110,6 +110,23 @@
             android:textAllCaps="false"
             android:text="Ver Calendário"
             android:onClick="abrirCalendario"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/PerfilCultura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/botaoCalendario"
+            android:background="@drawable/botao"
+            android:backgroundTint="@color/black"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:text="Perfil de Cultura"
+            android:onClick="abrirPerfilCultura"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
