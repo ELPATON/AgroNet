@@ -22,6 +22,7 @@ public class PerfilCultura extends AppCompatActivity {
         TextView labelCotacao = findViewById(R.id.labelCotacao);
         TextView labelResultado = findViewById(R.id.labelResultado);
         Button botaoCalcular = findViewById(R.id.botaoCalcular);
+        EditText inputCotacao = findViewById(R.id.inputCotacao);  // Referência para o campo de cotação
 
         // Configuração inicial
         double cotacaoPorSaca = 5.0; // Valor fixo para teste; pode ser dinâmico.
@@ -51,24 +52,25 @@ public class PerfilCultura extends AppCompatActivity {
 
                     // Captura dos valores
                     int qtdSacas = Integer.parseInt(inputQtdSacas.getText().toString());
-                    double qtdGraos = qtdSacas * 60.0; // 1 saca = 60kg
-                    double valorTotal = qtdSacas * cotacaoPorSaca;
+                    double qtdGraos = qtdSacas * 60.0; // Exemplo de cálculo: 60 kg por saca
+                    double resultado = qtdGraos * cotacaoPorSaca;
 
-                    // Ajuste da unidade (kg ou toneladas)
-                    String unidade = qtdGraos >= 1000 ? "toneladas" : "kg";
-                    double qtdGraosFinal = qtdGraos >= 1000 ? qtdGraos / 1000 : qtdGraos;
+                    // Exibe os resultados
+                    labelQtdGraos.setText("Quantidade de Grãos: " + qtdGraos + " kg");
+                    labelResultado.setText("Valor Total: R$ " + resultado);
 
-                    // Exibição dos resultados
-                    labelQtdGraos.setText("Quantidade de Grãos: " + String.format("%.2f", qtdGraosFinal) + " " + unidade);
-                    labelResultado.setText("Valor Total: R$ " + String.format("%.2f", valorTotal));
+                    // Atualiza a cotação se o campo estiver preenchido
+                    if (!inputCotacao.getText().toString().isEmpty()) {
+                        cotacaoPorSaca = Double.parseDouble(inputCotacao.getText().toString());
+                        labelCotacao.setText("Cotação: R$ " + cotacaoPorSaca + " por saca");
+                    }
                 } catch (NumberFormatException e) {
-                    Toast.makeText(PerfilCultura.this, "Erro no formato dos valores inseridos. Por favor, corrija.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PerfilCultura.this, "Erro nos valores inseridos!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 
-    // Método auxiliar para verificar campos vazios
     private boolean isCampoVazio(EditText campo) {
         return campo.getText().toString().trim().isEmpty();
     }

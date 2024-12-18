@@ -121,6 +121,17 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp" />
 
+    <!-- Campo de Cotação (EditText para o usuário inserir) -->
+    <EditText
+        android:id="@+id/inputCotacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a cotação"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/labelCotacao"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
     <!-- Resultado do valor total -->
     <TextView
         android:id="@+id/labelResultado"
@@ -128,7 +139,7 @@
         android:layout_height="wrap_content"
         android:text="Valor Total: R$ 0,00"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/labelCotacao"
+        app:layout_constraintTop_toBottomOf="@id/inputCotacao"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp" />
 
