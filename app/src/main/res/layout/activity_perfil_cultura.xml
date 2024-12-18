@@ -123,7 +123,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Cotação -->
+    <!-- Cotção -->
     <TextView
         android:id="@+id/labelCotacao"
         android:layout_width="wrap_content"
@@ -134,7 +134,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Campo de Cotação (EditText para o usuário inserir) -->
+    <!-- Campo de Cotção (EditText para o usuário inserir) -->
     <EditText
         android:id="@+id/inputCotacao"
         android:layout_width="match_parent"

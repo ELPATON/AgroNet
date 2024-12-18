@@ -1,4 +1,4 @@
-package com.seuprojeto;
+package com.example.AgroNet;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ public class PerfilCultura extends AppCompatActivity {
     private static final String PREF_NAME = "PerfilCulturaPrefs";
     private static final String CULTURA_KEY = "CulturaNome";
 
-    private EditText inputNomeCultura, inputAreaPlantada, inputAreaAdubada, inputAreaDefensivo, inputQtdSacas;
+    private EditText inputNomeCultura, inputAreaPlantada, inputAreaAdubada, inputAreaDefensivo, inputQtdSacas, inputCotacao;
     private TextView labelTituloCultura, labelQtdGraos, labelResultado;
 
     @Override
@@ -29,6 +29,7 @@ public class PerfilCultura extends AppCompatActivity {
         inputAreaAdubada = findViewById(R.id.inputAreaAdubada);
         inputAreaDefensivo = findViewById(R.id.inputAreaDefensivo);
         inputQtdSacas = findViewById(R.id.inputQtdSacas);
+        inputCotacao = findViewById(R.id.inputCotacao);
         labelTituloCultura = findViewById(R.id.tituloCultura);
         labelQtdGraos = findViewById(R.id.labelQtdGraos);
         labelResultado = findViewById(R.id.labelResultado);
@@ -76,18 +77,22 @@ public class PerfilCultura extends AppCompatActivity {
 
     private void calcularResultado() {
         try {
-            if (isCampoVazio(inputAreaPlantada) || isCampoVazio(inputQtdSacas)) {
+            if (isCampoVazio(inputAreaPlantada) || isCampoVazio(inputQtdSacas) || isCampoVazio(inputCotacao)) {
                 Toast.makeText(this, "Por favor, preencha todos os campos obrigatórios!", Toast.LENGTH_SHORT).show();
                 return;
             }
 
+            // Captura dos valores
             int qtdSacas = Integer.parseInt(inputQtdSacas.getText().toString());
-            double qtdGraos = qtdSacas * 60.0;
-            double valorTotal = qtdSacas * 5.0;
+            double cotacao = Double.parseDouble(inputCotacao.getText().toString());
+            double qtdGraos = qtdSacas * 60.0; // 1 saca = 60kg
+            double valorTotal = qtdSacas * cotacao;
 
+            // Ajuste da unidade (kg ou toneladas)
             String unidade = qtdGraos >= 1000 ? "toneladas" : "kg";
             double qtdGraosFinal = qtdGraos >= 1000 ? qtdGraos / 1000 : qtdGraos;
 
+            // Exibição dos resultados
             labelQtdGraos.setText("Quantidade de Grãos: " + String.format("%.2f", qtdGraosFinal) + " " + unidade);
             labelResultado.setText("Valor Total: R$ " + String.format("%.2f", valorTotal));
 
@@ -99,4 +104,4 @@ public class PerfilCultura extends AppCompatActivity {
     private boolean isCampoVazio(EditText campo) {
         return campo.getText().toString().trim().isEmpty();
     }
-} // Este coméntario serve exclusivamente para que eu possa fazer um commit
+}
