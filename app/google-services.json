@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "840666445677",
+    "project_id": "agronet-acb15",
+    "storage_bucket": "agronet-acb15.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840666445677:android:be30caea22788ed1968c64",
+        "android_client_info": {
+          "package_name": "com.example.AgroNet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjloRA7_qrXw2-dbOR-vRYEQNWcjKkiHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

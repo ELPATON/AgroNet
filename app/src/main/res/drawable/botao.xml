@@ -4,6 +4,8 @@
         android:startColor="@color/pink"
         android:centerColor="@color/pink_light"
         android:endColor="@color/orange"
-        android:angle="90"
+        android:angle="180"
         />
+    <corners android:radius="20dp"/>
+
 </shape>
