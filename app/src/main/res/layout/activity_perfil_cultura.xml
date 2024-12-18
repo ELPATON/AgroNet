@@ -8,16 +8,29 @@
     android:padding="16dp"
     tools:context=".PerfilCultura">
 
-    <!-- Título -->
+    <!-- Título Dinâmico -->
     <TextView
         android:id="@+id/tituloCultura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Perfil de Cultura: Milho"
+        android:text="Perfil de Cultura:"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Campo para Nome da Cultura -->
+    <EditText
+        android:id="@+id/inputNomeCultura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o nome da cultura"
+        android:inputType="text"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tituloCultura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp" />
 
     <!-- Quantidade de Área Plantada -->
@@ -26,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Área Plantada (ha):"
-        app:layout_constraintTop_toBottomOf="@id/tituloCultura"
+        app:layout_constraintTop_toBottomOf="@id/inputNomeCultura"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
