@@ -17,7 +17,8 @@
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp" />
 
     <!-- Quantidade de Área Plantada -->
     <TextView
@@ -26,8 +27,7 @@
         android:layout_height="wrap_content"
         android:text="Área Plantada (ha):"
         app:layout_constraintTop_toBottomOf="@id/tituloCultura"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/inputAreaPlantada"
@@ -36,7 +36,8 @@
         android:hint="Digite a área plantada"
         android:inputType="numberDecimal"
         app:layout_constraintTop_toBottomOf="@id/labelAreaPlantada"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
 
     <!-- Quantidade Adubada -->
     <TextView
@@ -55,7 +56,8 @@
         android:hint="Digite a área adubada"
         android:inputType="numberDecimal"
         app:layout_constraintTop_toBottomOf="@id/labelAreaAdubada"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
 
     <!-- Quantidade com Defensivo -->
     <TextView
@@ -74,7 +76,8 @@
         android:hint="Digite a área com defensivo"
         android:inputType="numberDecimal"
         app:layout_constraintTop_toBottomOf="@id/labelAreaDefensivo"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
 
     <!-- Quantidade de Sacas -->
     <TextView
@@ -93,7 +96,8 @@
         android:hint="Digite a quantidade de sacas"
         android:inputType="number"
         app:layout_constraintTop_toBottomOf="@id/labelQtdSacas"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
 
     <!-- Resultado em kg ou toneladas -->
     <TextView
@@ -101,7 +105,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quantidade de Grãos: 0 kg"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/inputQtdSacas"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Cotação -->
+    <TextView
+        android:id="@+id/labelCotacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cotação: R$ 0,00 por saca"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/labelQtdGraos"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Resultado do valor total -->
+    <TextView
+        android:id="@+id/labelResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor Total: R$ 0,00"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/labelCotacao"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp" />
 
@@ -111,7 +138,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Calcular"
-        app:layout_constraintTop_toBottomOf="@id/labelQtdGraos"
+        android:backgroundTint="@color/green_leaf"
+        app:layout_constraintTop_toBottomOf="@id/labelResultado"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp" />
 
