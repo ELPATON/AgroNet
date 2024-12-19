@@ -70,10 +70,8 @@ public class TelaPerfil extends AppCompatActivity {
     }
 
 
-
-// Agora o método abrirPerfilCultura está dentro da classe
     public void abrirPerfilCultura(View v){
-        Intent intent = new Intent(TelaPerfil.this, calendario.class);
+        Intent intent = new Intent(TelaPerfil.this, PerfilCultura.class);
         startActivity(intent);
     }
 }
